@@ -7,7 +7,7 @@ class User(models.Model):
     def __str__(self):
         return self.username
 
-class poll():
+class Poll():
 
     title = models.CharField(max_length=100)
     def str(self):
