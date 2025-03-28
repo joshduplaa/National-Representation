@@ -10,10 +10,10 @@ def index(request):
 
 @api_view(['GET'])
 def get_user(request):
-    return Response(UserSerializer({"user": "jduplaa", "password": "abc123"}))
+    return Response(UserSerializer({"name": "jduplaa", "password": "abc123"}).data)
 
 
 @api_view(['GET'])
 def get_poll(request):
-    return Response(UserSerializer({"title": "human rights"}))
+    return Response(UserSerializer({"title": "human rights"}).data)
 

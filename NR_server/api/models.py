@@ -7,8 +7,9 @@ class User(models.Model):
     def __str__(self):
         return self.name
 
-class Poll():
-
-    title = models.CharField(max_length=100)
-    def str(self):
-        return self.title
+# class Poll():
+#     title = models.CharField(max_length=100)
+#     upvotes = models.IntegerField()
+#     downvotes = models.IntegerField()
+#     def str(self):
+#         return self.title
