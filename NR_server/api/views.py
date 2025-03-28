@@ -12,8 +12,19 @@ def index(request):
 def get_user(request):
     return Response(UserSerializer({"name": "jduplaa", "password": "abc123"}).data)
 
+@api_view(['POST'])
+def create_user(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
 
 @api_view(['GET'])
+def get_poll(request):
+    return Response(UserSerializer({"title": "human rights"}).data)
+
+@api_view(['POST'])
 def get_poll(request):
     return Response(UserSerializer({"title": "human rights"}).data)
 
